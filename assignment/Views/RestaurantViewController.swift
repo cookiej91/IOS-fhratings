@@ -20,7 +20,11 @@ class RestaurantViewController: UIViewController {
         nameLabel.text = restaurant.BusinessName
         addressLabel.text = "Address: \n\(restaurant.AddressLine1)\n \(restaurant.AddressLine2)\n \(restaurant.AddressLine3)"
         ratingLabel.text = "Rating Date: \(restaurant.RatingDate)"
-        distanceLabel.text = "Distance in KM: \(restaurant.DistanceKM!)"
+        if((restaurant.DistanceKM) != nil) {
+            distanceLabel.text = "Distance in KM: \(String(describing: restaurant.DistanceKM!))"
+        } else {
+            distanceLabel.text = "Distance in KM: No information available"
+        }
         
         ratingImage.image = UIImage.init(named:"\(ImageHandler.getRatingImage(restaurant.RatingValue)).jpg")
         
