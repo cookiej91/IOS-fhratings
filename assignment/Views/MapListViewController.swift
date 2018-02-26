@@ -42,9 +42,20 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
     
     //custom annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
+        if annotation is MKUserLocation {
+            return nil
+        }
+        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        if annotationView == nil{
+            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = false
+        }else{
+            annotationView?.annotation = annotation
+        }
+        annotationView?.image = UIImage(named: "1")
         return annotationView
     }
+
     
     @IBOutlet weak var mapView: MKMapView!
 }

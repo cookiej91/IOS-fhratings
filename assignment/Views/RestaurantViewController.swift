@@ -21,7 +21,8 @@ class RestaurantViewController: UIViewController {
         addressLabel.text = "Address: \n\(restaurant.AddressLine1)\n \(restaurant.AddressLine2)\n \(restaurant.AddressLine3)"
         ratingLabel.text = "Rating Date: \(restaurant.RatingDate)"
         if((restaurant.DistanceKM) != nil) {
-            distanceLabel.text = "Distance in KM: \(String(describing: restaurant.DistanceKM!))"
+            let formattedDistance = String(format: "%.6f", restaurant.DistanceKM!)
+            distanceLabel.text = "Distance in KM: \(String(describing: formattedDistance))"
         } else {
             distanceLabel.text = "Distance in KM: No information available"
         }
@@ -41,8 +42,8 @@ class RestaurantViewController: UIViewController {
         }
         annotation.coordinate = restaurantLocation2D
         annotation.title = restaurant.BusinessName
+        restaurantMap?.addAnnotation(annotation)
         
-      //  restaurantMap?.addAnnotation(annotation)
         centerMapOnLocation(location: restaurantLocation)
 
     }

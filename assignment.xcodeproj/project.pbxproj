@@ -21,6 +21,8 @@
 		23E140A4202C82EB00CB4D95 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */; };
 		23E140BA202C8AB200CB4D95 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140B9202C8AB200CB4D95 /* ImageHandler.swift */; };
 		23E140BC202C94D500CB4D95 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */; };
+		23E16BE12043EBAF00881E5F /* HygieneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */; };
+		23E16BE32043ED5700881E5F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E16BE22043ED5700881E5F /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		23E140B9202C8AB200CB4D95 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HygieneAnnotation.swift; sourceTree = "<group>"; };
+		23E16BE22043ED5700881E5F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,16 +115,15 @@
 		2364FE09202719C400DCCDF4 /* assignment */ = {
 			isa = PBXGroup;
 			children = (
+				2364FE11202719C400DCCDF4 /* Assets.xcassets */,
+				2364FE16202719C400DCCDF4 /* Info.plist */,
+				2364FE0A202719C400DCCDF4 /* AppDelegate.swift */,
+				23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */,
+				239B74292043F8200075FDAE /* Constructs */,
 				239F7BFF202CE46E00B200A2 /* Handlers */,
 				238D3DEF202CE3A000A5D7F3 /* Views */,
-				2364FE0A202719C400DCCDF4 /* AppDelegate.swift */,
-				2364FE3A20271D3B00DCCDF4 /* location.swift */,
-				23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */,
-				2364FE11202719C400DCCDF4 /* Assets.xcassets */,
-				235CFAF72031C0140074C273 /* Main.storyboard */,
 				2364FE13202719C400DCCDF4 /* LaunchScreen.storyboard */,
-				2364FE16202719C400DCCDF4 /* Info.plist */,
-				2364FE44202864FB00DCCDF4 /* Restaurant.swift */,
+				235CFAF72031C0140074C273 /* Main.storyboard */,
 			);
 			path = assignment;
 			sourceTree = "<group>";
@@ -146,11 +149,22 @@
 		238D3DEF202CE3A000A5D7F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2364FE0C202719C400DCCDF4 /* ViewController.swift */,
-				23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */,
+				23E16BE22043ED5700881E5F /* AnnotationView.swift */,
 				230DB4B7202DAD41003DA798 /* MapListViewController.swift */,
+				23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */,
+				2364FE0C202719C400DCCDF4 /* ViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		239B74292043F8200075FDAE /* Constructs */ = {
+			isa = PBXGroup;
+			children = (
+				23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */,
+				2364FE3A20271D3B00DCCDF4 /* location.swift */,
+				2364FE44202864FB00DCCDF4 /* Restaurant.swift */,
+			);
+			path = Constructs;
 			sourceTree = "<group>";
 		};
 		239F7BFF202CE46E00B200A2 /* Handlers */ = {
@@ -296,10 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E16BE12043EBAF00881E5F /* HygieneAnnotation.swift in Sources */,
 				230DB4B8202DAD41003DA798 /* MapListViewController.swift in Sources */,
 				2364FE45202864FB00DCCDF4 /* Restaurant.swift in Sources */,
 				23E140BC202C94D500CB4D95 /* RestaurantViewController.swift in Sources */,
 				2364FE3B20271D3B00DCCDF4 /* location.swift in Sources */,
+				23E16BE32043ED5700881E5F /* AnnotationView.swift in Sources */,
 				2364FE432028623500DCCDF4 /* ApiHandler.swift in Sources */,
 				23E140BA202C8AB200CB4D95 /* ImageHandler.swift in Sources */,
 				2364FE0D202719C400DCCDF4 /* ViewController.swift in Sources */,
