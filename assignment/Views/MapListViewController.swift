@@ -13,6 +13,7 @@ import MapKit
 class MapListViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         mapView!.showsUserLocation = true;
+        mapView.delegate = self
         populateMapList()
     }
     
@@ -20,24 +21,26 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
     func populateMapList() {
         for restaurant in ApiHandler.restaurants {
             let restaurantLocation2D = CLLocationCoordinate2D(latitude: Double(restaurant.Latitude)!, longitude: Double(restaurant.Longitude)!)
+            let restaurantLocation = CLLocation(latitude: Double(restaurant.Latitude)!, longitude: Double(restaurant.Longitude)!)
             userLocation().userCurrentLocation()
-            let currentLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            let annotation = MKPointAnnotation()
+            let annotation = HygieneAnnotation()
+            annotation.rating = "pin\(restaurant.RatingValue)"
             
             annotation.coordinate = restaurantLocation2D
             annotation.title = restaurant.BusinessName
             
             mapView.addAnnotation(annotation)
-            centerMapOnLocation(location: currentLocation)
+            centerMapOnLocation(location: restaurantLocation)
         }
     }
     
-    //centres within 100m of current location
+    //centres within 500m of current location
     func centerMapOnLocation(location: CLLocation) {
-        let regionRadius: CLLocationDistance = 100
+        let regionRadius: CLLocationDistance = 500
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView?.setRegion(coordinateRegion, animated: true)
-        print(mapView.userLocation.coordinate)
+        
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
     
     //custom annotation
@@ -45,14 +48,15 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
         if annotation is MKUserLocation {
             return nil
         }
-        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "Pin")
+        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
         if annotationView == nil{
-            annotationView = AnnotationView(annotation: annotation, reuseIdentifier: "Pin")
-            annotationView?.canShowCallout = false
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            annotationView?.canShowCallout = true
         }else{
             annotationView?.annotation = annotation
         }
-        annotationView?.image = UIImage(named: "1")
+        
+        annotationView?.image = UIImage(named: (annotation as! HygieneAnnotation).rating)
         return annotationView
     }
 

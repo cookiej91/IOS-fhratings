@@ -9,15 +9,8 @@
 import Foundation
 import MapKit
 
-class HygieneAnnotation: NSObject, MKAnnotation {
+class HygieneAnnotation: MKPointAnnotation {
+    var restaurant: Restaurant!
+    var rating: String!
     
-    var coordinate: CLLocationCoordinate2D
-    var phone: String!
-    var name: String!
-    var address: String!
-    var image: UIImage!
-    
-    init(coordinate: CLLocationCoordinate2D) {
-        self.coordinate = coordinate
-    }
 }

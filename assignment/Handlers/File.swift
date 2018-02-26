@@ -1,5 +1,5 @@
 //
-//  AnnotationView.swift
+//  File.swift
 //  assignment
 //
 //  Created by JoshC on 26/02/2018.
@@ -7,9 +7,3 @@
 //
 
 import Foundation
-import MapKit
-
-class AnnotationView: MKAnnotationView
-{
-
-}

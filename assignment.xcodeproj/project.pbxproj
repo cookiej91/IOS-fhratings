@@ -19,11 +19,10 @@
 		2364FE432028623500DCCDF4 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364FE422028623500DCCDF4 /* ApiHandler.swift */; };
 		2364FE45202864FB00DCCDF4 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364FE44202864FB00DCCDF4 /* Restaurant.swift */; };
 		239B742B204411F50075FDAE /* userLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B742A204411F50075FDAE /* userLocation.swift */; };
+		239B742F20443AAF0075FDAE /* HygieneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239B742E20443AAF0075FDAE /* HygieneAnnotation.swift */; };
 		23E140A4202C82EB00CB4D95 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */; };
 		23E140BA202C8AB200CB4D95 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140B9202C8AB200CB4D95 /* ImageHandler.swift */; };
 		23E140BC202C94D500CB4D95 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */; };
-		23E16BE12043EBAF00881E5F /* HygieneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */; };
-		23E16BE32043ED5700881E5F /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E16BE22043ED5700881E5F /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +61,10 @@
 		2364FE422028623500DCCDF4 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		2364FE44202864FB00DCCDF4 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		239B742A204411F50075FDAE /* userLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userLocation.swift; sourceTree = "<group>"; };
+		239B742E20443AAF0075FDAE /* HygieneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HygieneAnnotation.swift; sourceTree = "<group>"; };
 		23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		23E140B9202C8AB200CB4D95 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
-		23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HygieneAnnotation.swift; sourceTree = "<group>"; };
-		23E16BE22043ED5700881E5F /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 		238D3DEF202CE3A000A5D7F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				23E16BE22043ED5700881E5F /* AnnotationView.swift */,
 				230DB4B7202DAD41003DA798 /* MapListViewController.swift */,
 				23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */,
 				23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */,
@@ -162,10 +159,10 @@
 		239B74292043F8200075FDAE /* Constructs */ = {
 			isa = PBXGroup;
 			children = (
-				23E16BE02043EBAF00881E5F /* HygieneAnnotation.swift */,
 				2364FE3A20271D3B00DCCDF4 /* location.swift */,
 				2364FE44202864FB00DCCDF4 /* Restaurant.swift */,
 				239B742A204411F50075FDAE /* userLocation.swift */,
+				239B742E20443AAF0075FDAE /* HygieneAnnotation.swift */,
 			);
 			path = Constructs;
 			sourceTree = "<group>";
@@ -313,18 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E16BE12043EBAF00881E5F /* HygieneAnnotation.swift in Sources */,
 				230DB4B8202DAD41003DA798 /* MapListViewController.swift in Sources */,
 				2364FE45202864FB00DCCDF4 /* Restaurant.swift in Sources */,
 				23E140BC202C94D500CB4D95 /* RestaurantViewController.swift in Sources */,
 				2364FE3B20271D3B00DCCDF4 /* location.swift in Sources */,
-				23E16BE32043ED5700881E5F /* AnnotationView.swift in Sources */,
 				2364FE432028623500DCCDF4 /* ApiHandler.swift in Sources */,
 				23E140BA202C8AB200CB4D95 /* ImageHandler.swift in Sources */,
 				2364FE0D202719C400DCCDF4 /* ViewController.swift in Sources */,
 				239B742B204411F50075FDAE /* userLocation.swift in Sources */,
 				23E140A4202C82EB00CB4D95 /* RestaurantTableViewCell.swift in Sources */,
 				2364FE0B202719C400DCCDF4 /* AppDelegate.swift in Sources */,
+				239B742F20443AAF0075FDAE /* HygieneAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
