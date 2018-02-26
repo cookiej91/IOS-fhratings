@@ -118,7 +118,6 @@
 				2364FE11202719C400DCCDF4 /* Assets.xcassets */,
 				2364FE16202719C400DCCDF4 /* Info.plist */,
 				2364FE0A202719C400DCCDF4 /* AppDelegate.swift */,
-				23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */,
 				239B74292043F8200075FDAE /* Constructs */,
 				239F7BFF202CE46E00B200A2 /* Handlers */,
 				238D3DEF202CE3A000A5D7F3 /* Views */,
@@ -152,6 +151,7 @@
 				23E16BE22043ED5700881E5F /* AnnotationView.swift */,
 				230DB4B7202DAD41003DA798 /* MapListViewController.swift */,
 				23E140BB202C94D500CB4D95 /* RestaurantViewController.swift */,
+				23E140A3202C82EB00CB4D95 /* RestaurantTableViewCell.swift */,
 				2364FE0C202719C400DCCDF4 /* ViewController.swift */,
 			);
 			path = Views;
