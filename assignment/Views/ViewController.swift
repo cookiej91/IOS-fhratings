@@ -41,7 +41,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //segue - ready for view change
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as? RestaurantTableViewCell
-        
         let getRestaurant = cell?.restaurant
         if let yourVC = segue.destination as? RestaurantViewController {
             yourVC.restaurant = getRestaurant
@@ -64,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         switch segmentIndex {
         case 0:
-            return ApiHandler.getFromPostdode(query: text!, complete: complete)
+            return ApiHandler.getFromPostcode(query: text!, complete: complete)
         case 1:
             return ApiHandler.getFromName(query: text!, complete: complete)
             

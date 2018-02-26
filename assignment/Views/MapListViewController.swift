@@ -12,7 +12,7 @@ import MapKit
 
 class MapListViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
-                self.mapView!.showsUserLocation = true
+        mapView!.showsUserLocation = true;
         populateMapList()
     }
     
@@ -20,16 +20,15 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
     func populateMapList() {
         for restaurant in ApiHandler.restaurants {
             let restaurantLocation2D = CLLocationCoordinate2D(latitude: Double(restaurant.Latitude)!, longitude: Double(restaurant.Longitude)!)
-            
-            let restaurantLocation = CLLocation(latitude: Double(restaurant.Latitude)!, longitude: Double(restaurant.Longitude)!)
-
+            userLocation().userCurrentLocation()
+            let currentLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
             let annotation = MKPointAnnotation()
             
             annotation.coordinate = restaurantLocation2D
             annotation.title = restaurant.BusinessName
             
             mapView.addAnnotation(annotation)
-            centerMapOnLocation(location: restaurantLocation)
+            centerMapOnLocation(location: currentLocation)
         }
     }
     
@@ -38,6 +37,7 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
         let regionRadius: CLLocationDistance = 100
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView?.setRegion(coordinateRegion, animated: true)
+        print(mapView.userLocation.coordinate)
     }
     
     //custom annotation

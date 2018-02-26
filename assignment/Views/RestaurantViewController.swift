@@ -21,6 +21,7 @@ class RestaurantViewController: UIViewController {
         addressLabel.text = "Address: \n\(restaurant.AddressLine1)\n \(restaurant.AddressLine2)\n \(restaurant.AddressLine3)"
         ratingLabel.text = "Rating Date: \(restaurant.RatingDate)"
         if((restaurant.DistanceKM) != nil) {
+            //formatting distance in KM by casting to double and rounding to 3 D.P
             let distance = Double(restaurant.DistanceKM!)
             let formattedNumber = round(distance! * 1000) / 1000
             distanceLabel.text = "Distance in KM: \(formattedNumber)"

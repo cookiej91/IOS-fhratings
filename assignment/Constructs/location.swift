@@ -11,7 +11,6 @@ import CoreLocation;
 
 //Gets current location to pass through to API handler
 class location: CLLocationManager {
-
     var locationManager: CLLocationManager!
     
     func currentLocation() -> String {

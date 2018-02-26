@@ -29,8 +29,9 @@ class ApiHandler {
         getRestaurants(queryString: "\(url)\(currentLocation)", complete: complete)
     }
     
-    static func getFromPostdode(query: String, complete: @escaping () -> Void) -> Void {
-        let postcode = query;
+    static func getFromPostcode(query: String, complete: @escaping () -> Void) -> Void {
+        //formatted query to substring if someone adds full length post code as the API only handles first part of postcode
+        let postcode = query.replace(target: " ", withString:"")
         getRestaurants(queryString: "\(url)postcode&postcode=\(postcode)", complete: complete)
     }
     
