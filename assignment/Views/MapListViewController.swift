@@ -25,7 +25,7 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
             userLocation().userCurrentLocation()
             let annotation = HygieneAnnotation()
             annotation.rating = "pin\(restaurant.RatingValue)"
-            
+            annotation.restaurant = restaurant
             annotation.coordinate = restaurantLocation2D
             annotation.title = restaurant.BusinessName
             
@@ -53,13 +53,28 @@ class MapListViewController: UIViewController, MKMapViewDelegate {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
             annotationView?.canShowCallout = true
         }else{
+            annotationView?.canShowCallout = true
             annotationView?.annotation = annotation
         }
         
         annotationView?.image = UIImage(named: (annotation as! HygieneAnnotation).rating)
+        
+        let btn = UIButton(type: .detailDisclosure)
+        annotationView?.rightCalloutAccessoryView = btn
         return annotationView
     }
-
+    
+    //segue - ready for view change
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! RestaurantViewController
+        destination.restaurant = sender as! Restaurant
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let hygieneView = view.annotation as! HygieneAnnotation
+        self.performSegue(withIdentifier: "MapDetailSegue", sender: hygieneView.restaurant)
+    }
+    
     
     @IBOutlet weak var mapView: MKMapView!
 }

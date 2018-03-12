@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         placesTable.dataSource = self
         placesTable.delegate = self
         searchBar.delegate = self
-        
     }
 
     override func didReceiveMemoryWarning() {

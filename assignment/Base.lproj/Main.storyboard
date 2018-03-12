@@ -128,11 +128,12 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map_marker" id="HVl-v7-Saf"/>
                     <connections>
                         <outlet property="mapView" destination="PiZ-H8-DBd" id="b9P-JW-lQ0"/>
+                        <segue destination="qWX-od-C3q" kind="show" identifier="MapDetailSegue" id="dwg-9T-7Sa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpM-aa-25r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.59999999999999" y="1574.6626686656673"/>
+            <point key="canvasLocation" x="-241" y="1679"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="gqU-tx-NUg">
@@ -156,10 +157,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hS-2H-CQn">
-                                <rect key="frame" x="214" y="251" width="161" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nRi-29-Ap8">
                                 <rect key="frame" x="0.0" y="424" width="375" height="243"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +180,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hS-2H-CQn">
+                                <rect key="frame" x="214" y="251" width="161" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JIl-Hz-xV9"/>
@@ -199,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMr-NE-nTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="485.30734632683664"/>
+            <point key="canvasLocation" x="1804" y="1295"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9hu-vJ-N4F">
@@ -227,5 +228,8 @@
         <image name="list" width="30" height="30"/>
         <image name="map_marker" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dwg-9T-7Sa"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.84704178569999999" green="0.88759970659999998" blue="0.42733758690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
